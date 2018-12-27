@@ -1,0 +1,10 @@
+/dist/
+/node_modules/
+/.vscode/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+.idea/

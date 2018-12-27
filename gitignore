@@ -1,0 +1,8 @@
+# Intellij IDEA
+/.idea/*
+
+# library
+/node_modules/*
+
+# Prod build
+/build/*
