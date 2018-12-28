@@ -1,11 +1,16 @@
 import React, { Component } from "react";
+import { ICondition } from '../../../../type/ICondition';
 
-class HeaderTitle extends Component {
+
+
+export default class HeaderTitle extends Component {
   constructor(props: any) {
     super(props);
   }
 
-  render() {
+
+
+  render () {
     return (
       <div className="headerTitle">
         <div className="headerData">
@@ -15,7 +20,7 @@ class HeaderTitle extends Component {
         <ul className="headerTypeData">
           <li>Day</li>
           <li>Week</li>
-          <li>Month</li>
+          <li >Month</li>
         </ul>
         <div className="headerToggleData">
         <img src='../../../../style/pict/l.png'/>
@@ -27,4 +32,4 @@ class HeaderTitle extends Component {
   }
 }
 
-export default HeaderTitle;
+

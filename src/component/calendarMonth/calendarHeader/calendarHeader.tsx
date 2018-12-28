@@ -1,25 +1,22 @@
-import React, { Component } from 'react';
-import HeaderButtons from './headerButtons/headerButtons';
-import HeaderTitles from './headerTitle/headerTitle';
-import HeaderWeekDays from './headerWeekDays/headerWeekDays';
-
-
+import React, { Component } from "react";
+import HeaderButtons from "./headerButtons/headerButtons";
+import HeaderTitles from "./headerTitle/headerTitle";
+import HeaderWeekDays from "./headerWeekDays/headerWeekDays";
 
 class CalendarHeader extends Component {
   constructor(props: any) {
     super(props);
   }
 
-  render () {
-
+  render() {
     return (
       <div className="calendarHeader">
-      <HeaderButtons />
-      <HeaderTitles />
-      <HeaderWeekDays />
-          </div>
+        <HeaderButtons />
+        <HeaderTitles />
+        <HeaderWeekDays />
+      </div>
     );
-    }
+  }
 }
 
 export default CalendarHeader;
