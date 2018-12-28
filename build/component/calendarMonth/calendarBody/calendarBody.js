@@ -14,17 +14,21 @@ var __extends = (this && this.__extends) || (function () {
 })();
 exports.__esModule = true;
 var react_1 = require("react");
-require("./item.sass");
-var Item = /** @class */ (function (_super) {
-    __extends(Item, _super);
-    function Item(props) {
+var calendarBodySection_1 = require("./calenarBodySection/calendarBodySection");
+var CalendarBody = /** @class */ (function (_super) {
+    __extends(CalendarBody, _super);
+    function CalendarBody(props) {
+        /*
+        if (props.days.length != 42) {
+          throw Error("Array's lenght must be only 42");
+        } */
         return _super.call(this, props) || this;
     }
-    Item.prototype.render = function () {
-        return (react_1["default"].createElement("div", { className: "leftmenu-item" },
-            react_1["default"].createElement("div", { className: "leftmenu-item-text" }, this.props.name),
-            react_1["default"].createElement("div", { className: "leftmenu-item-gradient" })));
+    CalendarBody.prototype.render = function () {
+        return (react_1["default"].createElement("div", { className: "calendarBody" }, this.props.days.map(function (day) {
+            return (react_1["default"].createElement(calendarBodySection_1["default"], { key: day.id, day: day }));
+        })));
     };
-    return Item;
+    return CalendarBody;
 }(react_1["default"].Component));
-exports["default"] = Item;
+exports.CalendarBody = CalendarBody;

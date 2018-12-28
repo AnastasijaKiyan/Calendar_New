@@ -14,18 +14,15 @@ var __extends = (this && this.__extends) || (function () {
 })();
 exports.__esModule = true;
 var react_1 = require("react");
-var title_1 = require("./title/title");
-var section_1 = require("./section/section");
-var LeftMenu = /** @class */ (function (_super) {
-    __extends(LeftMenu, _super);
-    function LeftMenu(props) {
+var CalendarBodySection = /** @class */ (function (_super) {
+    __extends(CalendarBodySection, _super);
+    function CalendarBodySection(props) {
         return _super.call(this, props) || this;
     }
-    LeftMenu.prototype.render = function () {
-        return (react_1["default"].createElement("div", { className: "leftmenu-main" },
-            react_1["default"].createElement(title_1["default"], null),
-            react_1["default"].createElement(section_1["default"], null)));
+    CalendarBodySection.prototype.render = function () {
+        return (react_1["default"].createElement("div", { className: "calendarBodySection" },
+            react_1["default"].createElement("div", { className: 'calendarDay' }, this.props.day.day)));
     };
-    return LeftMenu;
-}(react_1.Component));
-exports["default"] = LeftMenu;
+    return CalendarBodySection;
+}(react_1["default"].Component));
+exports["default"] = CalendarBodySection;

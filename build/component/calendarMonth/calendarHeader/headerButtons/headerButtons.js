@@ -14,19 +14,17 @@ var __extends = (this && this.__extends) || (function () {
 })();
 exports.__esModule = true;
 var react_1 = require("react");
-var category_1 = require("./category/category");
-var reducer_1 = require("../../../reducer/reducer");
-var Section = /** @class */ (function (_super) {
-    __extends(Section, _super);
-    function Section(props) {
+var HeaderButtons = /** @class */ (function (_super) {
+    __extends(HeaderButtons, _super);
+    function HeaderButtons(props) {
         return _super.call(this, props) || this;
     }
-    Section.prototype.render = function () {
-        var state = reducer_1.store.getState();
-        return (react_1["default"].createElement("section", { className: "leftmenu-section" }, state.categories.map(function (category) {
-            return (react_1["default"].createElement(category_1["default"], { key: category.id, name: category.name, id: category.id }));
-        })));
+    HeaderButtons.prototype.render = function () {
+        return (react_1["default"].createElement("div", { className: "headerButtons" },
+            react_1["default"].createElement("input", { type: "button", value: "Properties" }),
+            react_1["default"].createElement("input", { type: "button", value: "Calendar" }),
+            react_1["default"].createElement("input", { type: "button", value: "Logs" })));
     };
-    return Section;
-}(react_1["default"].Component));
-exports["default"] = Section;
+    return HeaderButtons;
+}(react_1.Component));
+exports["default"] = HeaderButtons;

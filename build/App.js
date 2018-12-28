@@ -14,9 +14,9 @@ var __extends = (this && this.__extends) || (function () {
 })();
 exports.__esModule = true;
 var react_1 = require("react");
-var leftmenu_1 = require("./component/leftmenu/leftmenu");
 var Reducer = require("./reducer/reducer");
 require("./index.sass");
+var calendarMonth_1 = require("./component/calendarMonth/calendarMonth");
 var App = /** @class */ (function (_super) {
     __extends(App, _super);
     function App() {
@@ -35,7 +35,7 @@ var App = /** @class */ (function (_super) {
         this.unsubscribe();
     };
     App.prototype.render = function () {
-        return (react_1["default"].createElement(leftmenu_1["default"], null));
+        return react_1["default"].createElement(calendarMonth_1["default"], null);
     };
     return App;
 }(react_1.Component));

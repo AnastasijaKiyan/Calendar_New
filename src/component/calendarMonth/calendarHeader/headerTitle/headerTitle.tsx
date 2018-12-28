@@ -12,12 +12,16 @@ class HeaderTitle extends Component {
           <div className="headerDataMonth">October</div>
           <div className="headerDataYear">2018</div>
         </div>
-          <ul className="headerTypeData">
-            <li>Day</li>
-            <li>Week</li>
-            <li>Month</li>
-            </ul>
-        <div className="headerToggleData">Today</div>
+        <ul className="headerTypeData">
+          <li>Day</li>
+          <li>Week</li>
+          <li>Month</li>
+        </ul>
+        <div className="headerToggleData">
+        <img src='../../../../style/pict/l.png'/>
+        <span>Today</span>
+        <img src='../../../../style/pict/r.png'/>
+        </div>
       </div>
     );
   }

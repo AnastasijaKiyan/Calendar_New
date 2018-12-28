@@ -4,7 +4,8 @@ $size-hundred: 100
 $color-white: #fff
 $color-lightgrey: #d8d7d7
 $color-middlegrey: #e6e5e5
-$color-darkgrey: #70706f
+$color-darkgrey: #626262
+$color-extradarkgrey: #3c3c3b
 $color-orange: #f39200
 $color-green: #12a19a
 $bg-btn: #f1f1f1
@@ -44,17 +45,26 @@ html, body, div, span, h1, p, ol, ul, li
     padding: $size-null
     border: $size-null
 
+body 
+    background-color: $bg-btn
+
+
 .calendarMonth
     width: 1120px
     height: 873px
+    color: $color-extradarkgrey
     
 
     .calendarHeader
         height: 152px
+        font-family: 'ubuntu-regular'
+        font-size: 18px
+
 
         .headerButtons
             height: 57px
             background-color: $bg-btn
+
 
             input
                 height: 100%
@@ -62,47 +72,63 @@ html, body, div, span, h1, p, ol, ul, li
                 border-radius: 8px 8px 0 0
                 background-color: $bg-btn
                 border: none
+                font-family: 'ubuntu-regular'
+                font-size: 18px
 
         .headerTitle
             height: 59px
-            width: 100%
+            width: auto
             border-radius: 8px 8px 0 0
             display: flex
+            background-color: $color-white
+            padding-left: 24px
+            padding-right: 24px
+            justify-content: space-between
 
 
             .headerData
-                padding-top: 22px
+                display: flex
                 height: 59px
                 font-size: 28px
 
                 .headerDataMonth
                     width: 106px
-                    float: left
                     font-family: 'ubuntu-medium'
 
+
                 .headerDataYear
-                    float: left
                     margin-left: 8px
                     font-family: 'ubuntu-light'
                    
-        .headerTypeData
-            ul
-                display: flex
+            .headerTypeData
+                    display: flex
+                    color: #12a19a
+                    width: 244px
+                    justify-content: space-between
 
-                li
+
+                    li
+                        list-style-type: none
+
+            .headerToggleData
+                width: 112px
+                justify-content: space-between
 
 
         .headerWeekDays
+            display: flex
             height: 36px
             width: 100%
-            
-            ul
-                display: flex
+            background-color: $color-white
 
-                li
-                    width: 160px
-                    text-align: right
-                    padding-right: 23px
+
+
+            li
+                    
+                width: 160px
+                text-align: right
+                padding-right: 23px
+                list-style-type: none
 
 
     .calendarBody
@@ -117,9 +143,10 @@ html, body, div, span, h1, p, ol, ul, li
         
         & :first-child
             background-color: $color-middlegrey
-                
+
         & :last-child
             background-color: $color-middlegrey
+
 
 
 .calendarBodySection
@@ -139,12 +166,11 @@ html, body, div, span, h1, p, ol, ul, li
         text-align: center
         margin-top: 10px
         margin-right: 15px
-        font-family: 'ubuntu-regular'
         font-size: 18px
         float: right
         padding-top: 5px 
         padding-bottom: auto
-        color: $color-darkgrey
+
 
     .calendarDayActive
         background-color: $color-orange
